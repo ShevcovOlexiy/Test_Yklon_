@@ -1,0 +1,55 @@
+﻿body {
+background-image: url('img/1.png');
+background-repeat:no-repeat;
+background-size:cover;
+
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.wrapper{
+    width:1000px;
+    position:absolute;
+    display: inline-block; /* центрировать..*/
+    left: 50%;
+    transform: translate(-50%, 0); /*переместить элемент в лево на половину своей длины*/
+}
+
+.div-select-left{
+    width:600px;
+    position: relative;
+    height: 300px;
+    margin-right: 32px;
+    float:left;
+}
+
+.div-select-right {
+    width:auto;
+    position: relative;
+    height: 300px;
+    margin-left: 632px;
+    margin-right: 32px;
+}
+
+.sel{
+width:100%;
+position: relative;
+display:block;
+}
+

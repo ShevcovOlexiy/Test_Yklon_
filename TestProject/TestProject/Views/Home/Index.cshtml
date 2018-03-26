@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+            <div class="div-select-left"></div>
+            <div class="div-select-right">
+                
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                {
+                    <p class="lead">Ваша страна</p>
+                    @Html.DropDownList("Select1", ViewBag.CountryList as SelectList, new { @class = "sel", onChange = "form.submit();" })
+
+
+                    <p class="lead">Ваш город</p>
+                    @Html.DropDownList("Select2", ViewBag.TounList as SelectList, new { @class = "sel", onChange = "form.submit();" })
+                }
+            </div>
+<div>
+    @if (ViewBag.Error != null)
+    {
+        <h3 style="color :red">@ViewBag.Error</h3>
+    }
+    else
+    {
+        <h4 style="color :darkslategrey"> @ViewBag.TitleToun</h4>
+    <ul>
+        
+        <li>Время   @ViewBag.Time</li>
+        <li>Уровень @ViewBag.Level</li>
+        <li style="color :@ViewBag.color">Уровень @ViewBag.Hint</li>
+    </ul>
+    }
+</div>
+
+
+
+ 
+
+
+
